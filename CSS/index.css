@@ -30,9 +30,9 @@ body {
     width: 100%;
 }
 .carousel-slide {
-    pointer-events: none
+    pointer-events: none;
     object-fit: cover;
-    min-width: 400px;
+    min-width: auto;
     width: 100%;
     height: auto;
     max-height: 450px;
