@@ -101,7 +101,7 @@ body {
     margin-top: 2px;
     margin-left: 18px;
     margin-right: 10px;
-    width: 225px;
+    width: auto;
     height: 100%;
 }
 /*Esto de gif es para hacer que al pasar el cursor se muestre un gif del producto o una imagen secundaria*/
