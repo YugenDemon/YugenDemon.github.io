@@ -607,7 +607,6 @@ footer.legal a:hover {
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: ;
     padding: 5px;
     margin: 0 auto;
 }
