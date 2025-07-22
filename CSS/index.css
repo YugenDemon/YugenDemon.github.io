@@ -98,9 +98,8 @@ body {
     height: 223px;
 }
 .ContenedorProductos .RamdonItems .PrecioImagen .Imagn img {
+    margin: 0 auto;
     margin-top: 2px;
-    margin-left: 18px;
-    margin-right: 10px;
     width: auto;
     height: 100%;
 }
@@ -550,7 +549,7 @@ footer.legal a:hover {
 /*Estilos responsive*/
 @media (max-width: 800px) {
     .ContenedorProductos {
-        margin-left: 20%;
+        padding-left: 13%;
     }
     .Barra  .loguito {
         padding-top: 0;
