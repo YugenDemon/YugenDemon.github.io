@@ -1,0 +1,4 @@
+pagina inicial
+vista pa visualizar detalles del producto
+categorías
+vista para el carrito

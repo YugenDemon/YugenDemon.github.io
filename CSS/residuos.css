@@ -1,0 +1,78 @@
+.Information {
+    height: 500px;
+    gap: 60px;
+    display: flex;
+    background-color: rb(69, 69, 216);
+}
+
+.Information .Info1 {
+    position: relative;
+    right: 25px;
+    background-color: rb(67, 143, 67);
+    gap: 10px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.Information .Info1 img {
+    position: absolute;
+    left: 30px;
+    width: 650px;
+    height: 400px;
+}
+
+
+.Information .Info1 .Soporte  {
+    color: white;
+    display: flex;
+    text-align: left;
+    background-color: ;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 0px;
+    height: 50px;
+}
+
+.Information .Info1 .Soporte p {
+    background-color: black;
+    font-family: Goth1;
+    font-size: 25px;
+}
+
+.Information .Info2 {
+    background-color: rg(107, 176, 189);
+    position: relative;
+    left    : 100px;
+}
+
+.Information .Info2 img {
+    width: 20px;
+    height: 20px;
+}
+
+.Information .Info2  OL {
+    background-color: rg(175, 117, 117);
+    font-family: Goth1;
+    font-size: 30px;
+}
+
+.Information .Info2 .Contenedor2 input {
+    font-size: 20px;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.Information .Info2 .Contenedor2 button {
+    border: 0px;
+    color: white;
+    font-size: 25px;
+    font-family: Goth1;
+    background-color: black;
+}
+
+.Information .Info2 .Contenedor2  {
+    word-break: break-all;
+    background-color: rg(236, 195, 202);
+    font-size: 20px;
+}

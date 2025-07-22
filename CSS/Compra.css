@@ -1,0 +1,512 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body.locked {
+  overflow: hidden;  /* Evita que se scrollee la página */
+}
+/*Esto solo contiene el producto, pero los productos recomendados, 
+    la barra fija, y la ultima de derechos y redes sociales es aparte; hay dos divs principales
+    que son vista producto y detalles producto*/
+.InterfaceCompra {
+    margin-bottom: 90px;
+    width: 100%;
+    height: auto;
+}
+/*Para ser honesto, esto es relleno, como la barra esta en fixed, el contenido se sube automaticamente
+por lo que decidi incluir este div para evitar problemas de visibilidad*/
+.Relleno {
+    width: 100%;
+    height: 90px;
+    min-height: 150px;
+}
+
+.InterfaceCompra .ProductoyDetalles { 
+    padding: 10px;
+    gap: 10px;
+    margin-top: px;
+    width: 100%;
+    height: auto;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto {
+    justify-content: space-around;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    min-height: 60%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto {
+    overflow: scroll;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .VentanSCROL {
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    overflow-y: auto; 
+    scroll-behavior: smooth
+}
+.VentanSCROL::-webkit-scrollbar,
+.DetallesProducto::-webkit-scrollbar {
+    width: 6px;
+}
+.VentanSCROL::-webkit-scrollbar-thumb,
+.DetallesProducto::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 3px;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .VentanSCROL .ImagenesProduct {
+    justify-content: space-between;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    min-height: 180px;
+    height: 650px;
+    max-height: 900px;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .VentanSCROL .ImagenesProduct .EjemplosVariedad {
+    width: 30%;
+    min-width: 100px;
+    max-width: 200px;
+    height: 100%;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .VentanSCROL .ImagenesProduct .EjemplosVariedad .Reference {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .VentanSCROL .ImagenesProduct .EjemplosVariedad .Reference img{
+    width: 100px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .VentanSCROL .ImagenesProduct .ImagenGrande {
+    margin-top: 30px auto;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;    
+    background-size: cover;
+    background-image: url('../Imagenes/Ropa/Ejemplo Venta ropa/1.png');
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease-in-out;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto {
+    overflow: scroll;
+    padding: 10px;
+    width: 90%;
+    height: 100%;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto .DetallesCompra {
+    background-color: red;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center; 
+}
+/*Aqui termine la interface muestra de imagen de producto, y empieza los detalles como el nombre, calificaiones y etc*/
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails {
+    margin-top: 10px ;
+    background-color: gainsboro;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px 20px 20px 20px;
+}
+/*Esto de aqui solo aparece para pantallas pequeñas y desaparece en pantallas grandes*/
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive {
+    background-color: wheat;
+    width: 100%;
+    padding: 4px;
+    display: none;
+}
+@media (max-width: 768px) {
+    .InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive {
+        display: block
+    }
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive .LargueName {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 80%;
+    background-color: gainsboro;
+    padding: 10px;
+    width: 100%;
+    height: 80px
+    min-height: 100px;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive .Soldby {
+    gap: 2%;
+    display: flex;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 80%;
+    width: 100%;
+    height: auto;
+    background-color: gainsboro;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive .Soldby span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    font-size: 15px;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive .Soldby img {
+    width: 30px;
+    border-radius: 60px 60px 60px;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive .PrecioProducto {
+    font-family: Tahoma, sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+    height: auto;
+    background-color: gainsboro;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive .PrecioProducto .Divisa {
+
+    margin-right: 8px;
+    font-size: 40px;
+    font-family: Goth1;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive .PrecioProducto .Pricee {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-family: "Trebuchet MS", sans-serif;
+
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive .TallasyComprar {
+    background-color: gainsboro;
+    padding-top: 10px;
+    background-color: gainsboroebeccapurple;
+    width: 100%;
+    height: auto;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive .TallasyComprar .Tallas {
+    width: 100%;
+    height: 40px;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: space-around;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive .TallasyComprar .Tallas .talla-btn{
+    text-align: center;
+    width: 50px;
+    height: 40px;
+    border-radius: 60px 60px 60px 60px;
+    border: 2px solid #555;
+    background-color: white;
+    color: #333;
+    font-weight: bold;
+    border-radius: 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive .TallasyComprar .Tallas .talla-btn:hover {
+    background-color: #333;
+    color: white;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .Detallesresponsive .TallasyComprar .Tallas div a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: Goth1;;
+    
+}
+.ContadorUnidades {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 40px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+}
+
+.ContadorUnidades button {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: #000;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.ContadorUnidades button:hover {
+    color: #000;
+    background-color: #b0b0b0;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .Producto .NameyDetails .VendedorBusiness {
+    background-color: gainsboro;
+    width: 100%;
+    height: auto;
+    
+}
+.VendedorBusiness .infoVendedor {
+    gap: 2%;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.VendedorBusiness .infoVendedor .fotoVendedor {
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: auto;
+}
+.VendedorBusiness .infoVendedor .fotoVendedor img {
+    
+    border-radius: 60px 60px 60px 60px;
+    width: 100%;
+}
+.VendedorBusiness .infoVendedor .NameBusiness {
+    padding-left: 10px ;
+    border-left: 2px solid black;
+    width: 100%;
+    height: auto;
+}
+.VendedorBusiness .infoVendedor .NameBusiness .Name {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 2rem;
+    color: #000000;
+    border-bottom: 2px solid black;
+}
+.VendedorBusiness .infoVendedor .NameBusiness .seguidores {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+.VendedorBusiness .infoVendedor .NameBusiness .seguidores img {
+    width: 14px;
+    height: auto;
+}
+.VendedorBusiness .infoVendedor .NameBusiness .seguidores .numberFollow {
+    font-weight: bold;
+}
+.VendedorBusiness .infoVendedor .NameBusiness .follow {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+}
+.VendedorBusiness .infoVendedor .NameBusiness .follow button {
+    cursor: pointer;
+    border: none;
+    border-radius: 60px 60px 60px 60px;
+    width: 30%;
+    height: 40px;
+}
+.VendedorBusiness .infoVendedor .NameBusiness .follow button:hover {
+    transform: translateY(-3px);
+}
+.VendedorBusiness .infoVendedor .NameBusiness .follow .foll {
+    text-transform: uppercase;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.VendedorBusiness .infoVendedor .NameBusiness .follow img {
+    position: relative;
+    top: 11%;
+    height: 20px;
+    width: auto;
+}
+.masDetallesProduct {
+    padding: 5px;
+    width: 100%;
+    height: auto;
+}
+.masDetallesProduct .specificThings {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+} 
+.masDetallesProduct .specificThings .listadoCositas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    border-radius: 10px 10px 10px 10px;
+    width: 100%;
+    height: auto;
+}
+.masDetallesProduct .specificThings .listadoCositas span {
+    padding-left: 3%;
+    margin-bottom: 17px;
+    font-family: Goth1;
+    font-size: 25px;
+}
+.masDetallesProduct .specificThings .listadoCositas li {
+    margin-top: 5px ;
+    color: #333;
+    padding-left: 5% ;
+    list-style-type: none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: ;
+}
+.masDetallesProduct .specificThings .saveReport {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+.save {
+    display: flex;
+    font-family: goth1;
+    font-size: 22px;
+    width: auto;
+    height: 25px;
+}
+.save button {
+    margin-right: 5px;
+    width: 40px;
+    height: auto;
+    border: none;
+    border-radius: 50px 50px 50px 50px;
+}
+.save button:hover {
+    background-color: rgb(187, 113, 113);
+}
+.save img {
+    top: 25%;
+    width: 50%;
+    height: 50%;
+}
+.masDetallesProduct .specificThings .saveReport .Report {
+    width: auto;
+    display: flex;
+    justify-content: left;
+    height: 15%;
+}
+.Report a {
+    color: #000;
+    padding-left: 25%;
+    text-decoration: none;
+    font-family: Goth1;
+    font-size: 22px;
+}
+.Report a:hover {
+    color: red;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto .DetallesCompra .Detallesresponsive {
+    background-color: wheat;
+    width: 100%;
+    padding: 4px;
+    display: block;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto .DetallesCompra .Detallesresponsive .LargueName {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 80%;
+    background-color: gainsboro;
+    padding: 10px;
+    width: 100%;
+    height: 80px
+    min-height: 100px;
+    margin-bottom:10px; 
+    padding-bottom: 20px;
+    border-bottom: 3px solid black;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto .DetallesCompra .Detallesresponsive .Soldby {
+    padding-left: 20px;
+    padding-top: 20px;
+    gap: 2%;
+    display: flex;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 80%;
+    width: 100%;
+    height: auto;
+    background-color: gainsboro;
+    padding-bottom: 20px;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto .DetallesCompra .Detallesresponsive .Soldby span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    font-size: 15px;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto .DetallesCompra .Detallesresponsive .Soldby img {
+    width: 30px;
+    border-radius: 60px 60px 60px;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto .DetallesCompra .Detallesresponsive .PrecioProducto {
+    font-family: Tahoma, sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+    height: auto;
+    background-color: gainsboro;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto .DetallesCompra .Detallesresponsive .PrecioProducto .Divisa {
+
+    margin-right: 8px;
+    font-size: 40px;
+    font-family: Goth1;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto .DetallesCompra .Detallesresponsive .PrecioProducto .Pricee {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-family: "Trebuchet MS", sans-serif;
+
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto .DetallesCompra .Detallesresponsive .TallasyComprar {
+    background-color: gainsboro;
+    padding-top: 10px;
+    background-color: gainsboroebeccapurple;
+    width: 100%;
+    height: auto;
+}
+.InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto .DetallesCompra .Detallesresponsive .TallasyComprar .Tallas {
+    width: 100%;
+    height: 40px;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: space-around;
+}
+.talla-btn{
+    text-align: center;
+    width: 50px;
+    height: 40px;
+    border-radius: 60px 60px 60px 60px;
+    border: 2px solid #555;
+    background-color: white;
+    color: #333;
+    font-weight: bold;
+    border-radius: 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.talla-btn:hover {
+    background-color: #333;
+    color: white;
+}
+@media (max-width: 768px) {
+    .InterfaceCompra .ProductoyDetalles .VistaProducto .DetallesProducto .DetallesCompra .Detallesresponsive {
+        display: none;
+    }

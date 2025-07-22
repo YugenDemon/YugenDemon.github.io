@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+/*Interfaz principal*/
+.customerSupport {
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+}
+.customerSupport .coverHelp {
+    overflow: hidden;
+    width: 100%;
+    height: 40%;
+    background-color: rgb(39, 45, 119);
+}
+.customerSupport  .coverHelp .backPicture {
+    position: relative;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+}
+.customerSupport  .coverHelp .backPicture img {
+    width: 100%;
+    height: 100%;
+}
+.customerSupport  .coverHelp .backPicture .Back {
+    text-align: left;
+    cursor: pointer;
+    margin: 30px;
+    margin-left: 5%;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 20%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+.customerSupport  .coverHelp .backPicture .Back:hover {
+    transform: translateY(-5px);
+}
+.customerSupport  .coverHelp .backPicture .Back a {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: rgb(214, 214, 214);
+    padding-left: 5%;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.329);
+    padding: 10px;
+    border-radius: 60px 60px 60px 60px;
+    transition: all 0.3s ease;
+
+    
+}
+.customerSupport  .coverHelp .backPicture .Back a:hover {
+    padding: 10px;
+    border-radius: 60px 60px 60px 60px;
+    text-decoration: underline;
+    background-color: rgb(219, 219, 219);
+    color: rgb(0, 0, 0);
+    transform: translateY(-5px)
+}
+.Tituloo {
+    
+    margin: 30px;
+    margin-left: 5%;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20%;
+    padding-bottom: 100px;
+    background-color: lack;
+
+}
+.Tituloo .Suporting {
+    background-color: rgba(0, 0, 0, 0.219);
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    text-align: left;
+    color: #d8d8d8;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+} 
+.Tituloo .subtitulo {
+    margin-top: 5%;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 15px;
+}
+/*Preguntas comunes, o temas recomendados*/
+.recomendTopics {
+    padding-top: 2%;
+    padding-bottom: 4%;
+    width: auto;
+    height: auto;
+    margin: 10px;
+}
+.recomendTopics .recomendados {
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    background-color: transparent;
+    margin-bottom: 20px;
+}
+.recomendTopics .recomendados span {
+    padding-left: 2;
+    padding: 1%;
+    height: auto;
+    width: 100%;
+    font-size: 28px;
+    letter-spacing: 3px;
+    font-family: Goth1;
+}
+.recomendTopics  .comunQuestions {
+    height: 100%;
+    gap: 5%;
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
+}
+.recomendTopics .itemQ {
+    margin-left: 10px;
+    margin-right: 30px;
+    gap: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;
+    height: auto;
+}
+.recomendTopics .itemQ button {
+    border: none;
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    height: 80%;
+    color: #fff;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.recomendTopics .itemQ button:hover {
+    color: rgb(104, 44, 44);
+    background-color: #c2c2c2;
+    transform: translateY(-2px);
+}
+.recomendTopics .itemQ a {
+    color: black;
+    padding-left: 3%;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+@media (max-width: 600px) {
+    .customerSupport  .coverHelp .backPicture .Back{
+        width: 100px;
+        text-align: center;
+        border-radius: 60px 60px 60px 60px;
+        height: 50px;
+        background-color: black;
+    }
+    .customerSupport  .coverHelp .backPicture .Back a {
+        color: rgb(230, 230, 230);
+        font-family: 'Poppins', sans-serif;
+        font-size: 10px;
+        position: relative;
+        top: 5px;
+        
+    }
+    .recomendTopics .recomendados {
+        text-align: center;
+    }
+    
+    .recomendTopics {
+        overflow: hidden;
+        padding-top: 2%;
+        padding-bottom: 4%;
+        width: auto;
+        height: auto;
+        margin: 10px;
+    }
+    .recomendTopics .comunQuestions {
+        overflow-y: scroll;
+        border: 3px solid rg(74, 98, 163);
+        height: 100%;
+        padding-left: 5px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+
+    }
+    .recomendTopics  {
+        height: 100%;
+    }
+    .recomendTopics .itemQ button {
+    text-align: center;
+    width: 90%;
+    height: 100%;
+    }
+}
+.contactarSoporte {
+    width: 100%;
+    height: auto;
+    background-color: rgb(9, 85, 121);
+}
+.contactarSoporte .itemQ {
+    padding-left: 20px;
+}
